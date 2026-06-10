@@ -46,6 +46,7 @@ I decided it was fixed when I saw that I was either given the correct hint when 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Streamlit reruns are kinda like refreshing the page everytime you click a button, so when you try to submit an answer it causes the program to act like you refrehed the entier page. Session state is a fix that prevents certain inputs from being deleted when a page refreshes. An example of this would be a survey form that keeps your previous answers if you closed the page out and repopened it again.
 
 ---
 
