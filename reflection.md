@@ -27,7 +27,7 @@ New game|New secret and can resubmit new answer |was unable to |N/A | |
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 Claude
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-It told me 
+It told me to check the outputs for clicking new game to see if there
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
 ---
@@ -35,7 +35,7 @@ It told me
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-When I saw I was able to not only enter an incorrect value and it gave me a proper hint
+I decided it was fixed when I saw that I was either given the correct hint when I entered an incorrect guess or I was able to properly start a new game by clicking the new game button instead of refreshing the page. 
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
   Manual Test and it showed it worked after entering two incorrect answers(one higher and one lower) to ensure it properly displayed that the answer was lower or higher than the guess respectively 
@@ -53,5 +53,8 @@ When I saw I was able to not only enter an incorrect value and it gave me a prop
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  I would use an AI program to help me double and triple check my work to see if it spotted an error I missed.
 - What is one thing you would do differently next time you work with AI on a coding task?
+I would ask AI for help on problems I ran into sooner. 
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+The project changed the way I viewed AI generate code as I now know I need to always be checking it incase it produces any errors. 

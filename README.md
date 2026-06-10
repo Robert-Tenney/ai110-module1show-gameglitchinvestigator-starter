@@ -26,32 +26,52 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-You are supposed to guess a random number between 1 and 100
-- [ ] Detail which bugs you found.
-I ran into a bug where clicking New game doesn't make the game start over from the beginning
-the Higher Lower hints are incorrect
-- [ ] Explain what fixes you applied.
-I swapped the results for if the guess was too high and too low so that it says to go lower if it was too high and to go higher if it was too low
+- [x] Describe the game's purpose.
+You are supposed to guess a random number between 1 and 100.
+
+- [x] Detail which bugs you found.
+Bug 1 — State reset: clicking "New Game" (or any button) caused the
+secret number to regenerate on every Streamlit rerun, making the game
+impossible to win.
+Bug 2 — Inverted hints: the Higher/Lower feedback was reversed — the
+app said "Go Higher" when the guess was too high, and "Go Lower" when
+the guess was too low.
+
+- [x] Explain what fixes you applied.
+Fix 1 — Used `st.session_state` to store the secret number so it
+persists across reruns instead of being regenerated each time.
+Fix 2 — Swapped the comparison branches so that a guess above the
+secret number correctly shows "Go Lower" and a guess below correctly
+shows "Go Higher".
+
 ## 📸 Demo Walkthrough
 
-Describe your fixed game in numbered steps so a reader can follow along without watching a video:
-
-1. Open the application
-2.Click on the options menu to bring up the difficulty select screen
-3. Choose your desired difficulty
-4. Enter a random number between 1 and 100 and press submit
-5. If the answer is correct click "New Game" to start over, if the answer is inncorrect look at the hint If it says "Go Lower" your guess is larger than the answer if it says "Go Higher" you guess is smaller than the answer
-
+1. Open the application.
+2. Click the options menu to bring up the difficulty select screen.
+3. Choose your desired difficulty.
+4. Enter a number between 1 and 100 and press Submit.
+5. If correct, click "New Game" to start over.
+   If incorrect, read the hint:
+   - "Go Lower" → your guess is larger than the answer.
+   - "Go Higher" → your guess is smaller than the answer.
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
-```
+===================== test session starts ======================
+platform win32 -- Python 3.14.5, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\u\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\u\ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.13.0
+collected 3 items
+
+tests/test_game_logic.py::test_winning_guess PASSED       [ 33%]
+tests/test_game_logic.py::test_guess_too_high PASSED      [ 66%]
+tests/test_game_logic.py::test_guess_too_low PASSED       [100%]
+
+====================== 3 passed in 0.04s =======================
+
 
 ## 🚀 Stretch Features
 
