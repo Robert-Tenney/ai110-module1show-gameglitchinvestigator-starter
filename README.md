@@ -41,7 +41,7 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 2.Click on the options menu to bring up the difficulty select screen
 3. Choose your desired difficulty
 4. Enter a random number between 1 and 100 and press submit
-5. If the 
+5. If the answer is correct click "New Game" to start over, if the answer is inncorrect look at the hint If it says "Go Lower" your guess is larger than the answer if it says "Go Higher" you guess is smaller than the answer
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
