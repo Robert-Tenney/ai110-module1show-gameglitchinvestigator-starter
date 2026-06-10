@@ -9,6 +9,7 @@ It wrote the code, ran away, and now the game is unplayable.
 - The hints lie to you.
 - The secret number seems to have commitment issues.
 
+<!--  -->
 ## 🛠️ Setup
 
 1. Install dependencies: `pip install -r requirements.txt`
@@ -26,18 +27,21 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+You are supposed to guess a random number between 1 and 100
 - [ ] Detail which bugs you found.
+I ran into a bug where clicking New game doesn't make the game start over from the beginning
+the Higher Lower hints are incorrect
 - [ ] Explain what fixes you applied.
-
+I swapped the results for if the guess was too high and too low so that it says to go lower if it was too high and to go higher if it was too low
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. Open the application
+2.Click on the options menu to bring up the difficulty select screen
+3. Choose your desired difficulty
+4. Enter a random number between 1 and 100 and press submit
+5. If the 
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
